@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/14 14:31:08 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/19 00:49:47 by WSeegers         ###   ########.fr       */
+/*   Created: 2018/04/25 21:54:41 by wseegers          #+#    #+#             */
+/*   Updated: 2018/04/25 22:02:12 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *str)
+char	*ft_strsub(char const *str, t_uint start, size_t len)
 {
-	ft_putstr_fd(str, 1);
+	char *ret;
+	t_uint i;
+
+	if(!str || !(ret = ft_strnew(len)))
+		return (NULL);
+	i = -1;
+	while (++i < len)
+		ret[i] = str[start + i];
+	return (ret);
 }

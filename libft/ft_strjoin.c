@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/14 14:31:08 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/19 00:49:47 by WSeegers         ###   ########.fr       */
+/*   Created: 2018/04/25 22:02:29 by wseegers          #+#    #+#             */
+/*   Updated: 2018/04/25 22:08:01 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	ft_putstr_fd(str, 1);
+	char *ret;
+	t_uchar i;
+
+	if(!s1 || !s2 || !(ret = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+		return (NULL);
+	i = -1;
+	while (*s1)
+		ret[++i] = *s1++;
+	while (*s2)
+		ret[++i] = *s2++;
+	return (ret);
 }

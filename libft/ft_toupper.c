@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/14 14:31:08 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/19 00:49:47 by WSeegers         ###   ########.fr       */
+/*   Created: 2018/04/20 23:59:41 by WSeegers          #+#    #+#             */
+/*   Updated: 2018/04/21 15:59:08 by WSeegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *str)
+int		ft_toupper(int c)
 {
-	ft_putstr_fd(str, 1);
+	if (c == EOF)
+		return (EOF);
+	if (c >= -128 && c < 256)
+	{
+		c = c & 0xff;
+		if (ft_islower(c))
+			return (c & ~0x20);
+	}
+	return (c);
 }

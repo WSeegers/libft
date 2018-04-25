@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_min.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/14 14:31:08 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/19 00:49:47 by WSeegers         ###   ########.fr       */
+/*   Created: 2018/04/24 12:49:03 by WSeegers          #+#    #+#             */
+/*   Updated: 2018/04/24 12:49:30 by WSeegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr(const char *str)
+long long ft_min(long long nbr1, long long nbr2)
 {
-	ft_putstr_fd(str, 1);
+	if (nbr1 < nbr2)
+		return (nbr1);
+	return (nbr2);
 }

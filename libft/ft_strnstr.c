@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/14 14:31:08 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/19 00:49:47 by WSeegers         ###   ########.fr       */
+/*   Created: 2018/04/24 12:23:48 by WSeegers          #+#    #+#             */
+/*   Updated: 2018/04/25 14:19:13 by WSeegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *str)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	ft_putstr_fd(str, 1);
+	size_t len_n;
+	size_t i;
+
+	if (!*little)
+		return ((char*)big);
+	if ((len_n = ft_strlen(little)) > ft_strlen(big))
+		return (NULL);
+	i = 0;
+	while (*big	&& ft_strncmp(big, little, len_n))
+	{
+		if (i++ >= len - len_n)
+			return (NULL);
+		big++;
+	}
+	return ((char*)big);
 }

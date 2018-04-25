@@ -6,31 +6,22 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 20:54:25 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/15 11:26:29 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/04/25 21:11:31 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_atoi(const char *nptr)
 {
-	int i;
-	int total;
-	int pos;
+	long int ret;
+	char **endptr;
 
-	i = -1;
-	total = 0;
-	pos = 1;
-	if (*nptr == '-')
-	{
-		pos = -1;
-		i++;
-	}
-	while (nptr[++i])
-	{
-		if (nptr[i] < '0' || nptr[i] > '9')
-			break;
-		total *= 10;
-		total += nptr[i] - '0';
-	}
-	total *= pos;
-	return (total);
+	endptr = ft_memalloc(sizeof(endptr));
+	ret = ft_strtol(nptr, endptr, 10);
+	if (ret == LONG_MAX)
+		return (-1);
+	if (ret == LONG_MIN)
+		return (0);
+	return ((int)ret);
 }

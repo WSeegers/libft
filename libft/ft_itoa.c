@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 14:41:57 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/16 23:34:29 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/04/21 13:40:04 by WSeegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_itoa(int nbr)
 	int		is_neg;
 	char	*str;
 
+	if (nbr == INT_MIN)
+		return (ft_strdup(INT_MIN_STR));
 	size = ft_intlen(nbr);
 	is_neg = 0;
 	if (nbr < 0)
@@ -35,12 +37,8 @@ char	*ft_itoa(int nbr)
 	if (is_neg)
 		str[0] = '-';
 	i = size;
+	str[i--] = (nbr % 10) + '0';
 	while (i >= 0 + is_neg)
-	{
-		str[i--] = (nbr % 10) + '0';
-		nbr /= 10;
-	}
+		str[i--] = ((nbr /= 10) % 10) + '0';
 	return (str);
 }
-
-
