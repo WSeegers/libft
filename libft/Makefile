@@ -6,15 +6,15 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/04/19 00:27:18 by WSeegers         ###   ########.fr        #
+#    Updated: 2018/04/26 22:40:40 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 SRC = $(wildcard ft_*.c)
-OBJ := $(SRC:.c=.o)
-CC = gcc
-CFLAGS =  -Wall -Wextra -Werror
+OBJ := $(addprefix ./.obj/,$(SRC:.c=.o))
+CC = clang
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -22,7 +22,7 @@ $(NAME) : $(OBJ)
 	ar rc $@ $?
 	ranlib $(NAME)
 
-%.o : %.c libft.h
+./.obj/%.o : %.c libft.h
 	$(CC) $(CFLAGS) -fpic -c $< -o $@
 
 so : $(OBJ)
