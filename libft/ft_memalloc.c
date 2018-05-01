@@ -6,11 +6,12 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 15:59:57 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/22 16:09:32 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/04/29 21:37:44 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {
@@ -21,6 +22,6 @@ void	*ft_memalloc(size_t size)
 		return (NULL);
 	i = 0;
 	while (i < size)
-		((char*)ptr)[i++] = 0;
+		((t_uchar*)ptr)[i++] = 0;
 	return (ptr);
 }

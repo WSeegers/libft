@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 12:46:29 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:53:59 by wseegers         ###   ########.fr       */
+/*   Created: 2018/04/29 21:43:03 by wseegers          #+#    #+#             */
+/*   Updated: 2018/04/29 21:51:25 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long ft_max(long nbr1, long nbr2)
+#include "libft.h"
+
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	if (nbr1 > nbr2)
-		return (nbr1);
-	return (nbr2);
+	(*del)((*alst)->content, (*alst)->content_size);
+	ft_memdel((void**)alst);
 }

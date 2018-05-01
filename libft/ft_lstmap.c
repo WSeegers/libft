@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 12:46:29 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:53:59 by wseegers         ###   ########.fr       */
+/*   Created: 2018/04/29 22:31:38 by wseegers          #+#    #+#             */
+/*   Updated: 2018/04/29 22:40:01 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long ft_max(long nbr1, long nbr2)
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	if (nbr1 > nbr2)
-		return (nbr1);
-	return (nbr2);
+	t_list *new;
+
+	if (lst)
+	{
+		new = (*f)(lst);
+		if (lst->next)
+			new->next = ft_lstmap(lst->next, f);
+		return (new);
+	}
+	return (NULL);
 }

@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 12:46:29 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:53:59 by wseegers         ###   ########.fr       */
+/*   Created: 2018/04/29 22:22:27 by wseegers          #+#    #+#             */
+/*   Updated: 2018/04/29 22:26:30 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long ft_max(long nbr1, long nbr2)
+#include "libft.h"
+
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (nbr1 > nbr2)
-		return (nbr1);
-	return (nbr2);
+	if (lst)
+	{
+		(*f)(lst);
+		while (lst->next)
+		{
+			(*f)(lst->next);
+			lst = lst->next;
+		}
+	}
 }

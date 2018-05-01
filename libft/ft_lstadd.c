@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/24 12:46:29 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:53:59 by wseegers         ###   ########.fr       */
+/*   Created: 2018/04/29 22:17:44 by wseegers          #+#    #+#             */
+/*   Updated: 2018/04/29 23:09:20 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long ft_max(long nbr1, long nbr2)
+#include "libft.h"
+
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (nbr1 > nbr2)
-		return (nbr1);
-	return (nbr2);
+	new->next = *alst;
+	*alst = new;
 }
