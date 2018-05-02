@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:04:17 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/25 21:04:48 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/02 12:07:29 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,6 @@ long int ft_strtol(const char *nptr, char **endptr, int base)
 		base = 10;
 	while ((*endptr = (char*)nptr) && (digit = charmap(*nptr++)) < base)
 		if ((result = (result * base) + digit) < 0)
-			return (LONG_MAX + neg);
+			return (FT_LONG_MAX + neg);
 	return (result + (result * -2 * neg));
 }

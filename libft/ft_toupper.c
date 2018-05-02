@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/20 23:59:41 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/21 15:59:08 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/02 12:09:42 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_toupper(int c)
 {
-	if (c == EOF)
-		return (EOF);
+	if (c == FT_EOF)
+		return (FT_EOF);
 	if (c >= -128 && c < 256)
 	{
 		c = c & 0xff;

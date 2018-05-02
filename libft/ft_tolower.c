@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 00:16:11 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/21 15:55:59 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/02 12:10:29 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_tolower(int c)
 {
-	if (c == EOF)
-		return (EOF);
+	if (c == FT_EOF)
+		return (FT_EOF);
 	if (c >= -128 && c < 256)
 	{
 		c = c & 0xff;

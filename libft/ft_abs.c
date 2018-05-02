@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/14 20:54:25 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/02 11:59:17 by wseegers         ###   ########.fr       */
+/*   Created: 2018/05/02 13:23:29 by wseegers          #+#    #+#             */
+/*   Updated: 2018/05/02 13:40:10 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *nptr)
+t_ulong	ft_abs(long nbr)
 {
-	long int ret;
-	char **endptr;
+	t_ulong unbr;
 
-	endptr = ft_memalloc(sizeof(endptr));
-	ret = ft_strtol(nptr, endptr, 10);
-	if (ret == FT_LONG_MAX)
-		return (-1);
-	if (ret == FT_LONG_MIN)
-		return (0);
-	return ((int)ret);
+	if (nbr < 0)
+		unbr = -nbr;
+	else
+		unbr = nbr;
+	return (unbr);
 }

@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:10:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:56:03 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/02 19:53:07 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,14 @@
 
 #include <string.h>
 
-# ifndef EOF
-#  define EOF (-1)
-# endif
+# define FT_EOF (-1)
 
-# define INT_MAX (2147483647)
-# define INT_MIN (-2147483647 - 1)
-# define INT_MIN_STR "-2147483648"
+# define FT_INT_MAX (2147483647)
+# define FT_INT_MIN (-2147483647 - 1)
 
-# define LONG_MAX 9223372036854775807
-# define LONG_MIN -9223372036854775807 - 1
+# define FT_LONG_MAX 9223372036854775807
+# define FT_LONG_MIN -9223372036854775807 - 1
+# define FT_LONG_MIN_STR "-9223372036854775808"
 
 typedef int t_bool;
 
@@ -59,13 +57,15 @@ void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
 
 // Number and String conversion
-size_t		ft_intlen(int nbr);
+size_t		ft_intlen(long nbr);
 char		*ft_itoa(int nbr);
 long int 	ft_strtol(const char *nptr, char **endptr, int base);
 int			ft_atoi(const char *nptr);
+char		*ft_itostr(t_ulong nbr, const t_uchar base);
 
 long		ft_max(long nbr1, long nbr2);
 long		ft_min(long nbr1, long nbr2);
+t_ulong		ft_abs(long nbr);
 
 //String functions
 char		*ft_strnew(size_t n);
