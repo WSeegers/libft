@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:10:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/02 19:53:07 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/03 09:26:02 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,10 @@ typedef int t_bool;
 # define TRUE 1
 # define FALSE 0
 
-typedef unsigned int	t_wchar;
-typedef unsigned int	t_uint;
-typedef unsigned char	t_uchar;
-typedef unsigned long	t_ulong;
+typedef unsigned int		t_wchar;
+typedef unsigned int		t_uint;
+typedef unsigned char		t_uchar;
+typedef unsigned long		t_ulong;
 
 //Memory functions
 void		*ft_memalloc(size_t size);
