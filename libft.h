@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:10:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/05 12:26:13 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/10 14:13:19 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 #include <string.h>
 
-# define FT_EOF (-1)
+//# define FT_EOF (-1)
 
 # define FT_INT_MAX (2147483647)
 # define FT_INT_MIN (-2147483647 - 1)

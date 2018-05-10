@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_ultoa_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/23 13:53:34 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/10 17:01:10 by wseegers         ###   ########.fr       */
+/*   Created: 2018/05/05 21:41:05 by wseegers          #+#    #+#             */
+/*   Updated: 2018/05/05 23:40:14 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <stdio.h>
+#include <unistd.h>
 
-int		ft_memcmp(const void *s1, const void *s2, size_t n)
+int		main(void)
 {
-	while (*(t_uchar*)s1 == *(t_uchar*)s2)
-	{
-		if (!--n)
-			return (0);
-		s1++;
-		s2++;
-	}
-	return (*(t_uchar*)s1 - *(t_uchar*)s2);
+	int i = -164;
+	char *str;
+	int n = 0;
+
+	str = ft_itoa(i);
+	ft_putstr(str);
+	ft_putstr("\n");
+	printf("%d\n", ft_atoi(str));
+
+	ft_strdel(&str);
 }
