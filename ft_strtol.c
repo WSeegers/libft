@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:04:17 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/02 12:07:29 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/10 18:22:11 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,24 @@ static t_uchar charmap(char c)
 	return (127);
 }
 
+static int	getbase(const char **nptr, int base)
+{
+	const char *ptr;
+
+	ptr = *nptr;
+	if ((base == 0 || base == 16) && *ptr == '0')
+	{
+		if (*(++ptr) == 'x' && (++(ptr)))
+			base = 16;
+		else if (*ptr == '0')
+			base = 8;
+		else
+			base = 10;
+		*nptr = ptr;
+	}
+	return (base);
+}
+
 long int ft_strtol(const char *nptr, char **endptr, int base)
 {
 	int neg;
@@ -39,17 +57,15 @@ long int ft_strtol(const char *nptr, char **endptr, int base)
 	if (*nptr == '-' || *nptr == '+')
 		if (*nptr++ == '-')
 			neg = 1;
-	if ((base == 0 || base == 16) && *nptr == '0')
-	{
-		if (*(++nptr) == 'x' && (nptr++))
-			base = 16;
-		else if (*nptr == '0')
-			base = 8;
-	}
-	if (base == 0)
-		base = 10;
-	while ((*endptr = (char*)nptr) && (digit = charmap(*nptr++)) < base)
+	base = getbase(&nptr, base);
+	while ((digit = charmap(*nptr++)) < base)
 		if ((result = (result * base) + digit) < 0)
+		{
+			if (endptr)
+				*endptr = (char*)nptr;
 			return (FT_LONG_MAX + neg);
+		}
+	if (endptr)
+			*endptr = (char*)nptr;
 	return (result + (result * -2 * neg));
 }

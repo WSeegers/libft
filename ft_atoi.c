@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 20:54:25 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/02 11:59:17 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/10 18:21:49 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 int		ft_atoi(const char *nptr)
 {
 	long int ret;
-	char **endptr;
 
-	endptr = ft_memalloc(sizeof(endptr));
-	ret = ft_strtol(nptr, endptr, 10);
+	ret = ft_strtol(nptr, NULL, 10);
 	if (ret == FT_LONG_MAX)
 		return (-1);
 	if (ret == FT_LONG_MIN)
