@@ -6,13 +6,13 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/05/06 11:22:45 by wseegers         ###   ########.fr        #
+#    Updated: 2018/05/13 22:10:41 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = clang
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I ./includes
 SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_strdup.c ft_strlen.c ft_strnlen.c ft_islower.c ft_strncpy.c \
 		ft_strnew.c ft_strnequ.c ft_strchr.c ft_memccpy.c ft_strdel.c \
@@ -31,6 +31,8 @@ SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 
 O_PATH = ./.obj/
 OBJ := $(addprefix $(O_PATH),$(SRC:.c=.o))
+DEP = $(SRC:%.c=$(O_PATH)%.d)
+
 
 NAME_SO = libft.so
 SO_PATH = ./.obj_so/
@@ -42,21 +44,23 @@ $(NAME) : $(OBJ)
 	ar rc $@ $?
 	ranlib $(NAME)
 
-$(O_PATH)%.o : %.c libft.h
+$(O_PATH)%.o : %.c
 	@mkdir -p $(O_PATH)
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -MMD -c $< -o $@
+
+-include $(DEP)
 
 so : $(NAME_SO)
 
 $(NAME_SO) : $(SO_OBJ)
 	gcc -shared -o libft.so $?
 
-$(SO_PATH)%.o : %.c libft.h
+$(SO_PATH)%.o : %.c
 	@mkdir -p $(SO_PATH)
 	$(CC) $(CFLAGS) -fpic -c $< -o $@
 
 clean :
-	rm -f $(OBJ) $(SO_OBJ)
+	rm -f $(OBJ) $(DEP) $(SO_OBJ)
 
 fclean : clean
 	rm -f $(NAME) $(NAME_SO)
