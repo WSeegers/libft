@@ -6,14 +6,14 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:10:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/13 21:54:01 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/14 13:42:09 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
+# include <string.h>
 
 # ifndef EOF
 #  define EOF (-1)

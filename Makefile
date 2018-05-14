@@ -6,7 +6,7 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/05/13 22:10:41 by wseegers         ###   ########.fr        #
+#    Updated: 2018/05/14 13:44:45 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,8 @@ SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_putchar_fd.c ft_lstdelone.c ft_putbyte.c ft_striter.c ft_lstadd.c
 
 O_PATH = ./.obj/
-OBJ := $(addprefix $(O_PATH),$(SRC:.c=.o))
-DEP = $(SRC:%.c=$(O_PATH)%.d)
-
+OBJ := $(addprefix $(O_PATH), $(SRC:.c=.o))
+DEP := $(addprefix $(O_PATH), $(SRC:.c=.d))
 
 NAME_SO = libft.so
 SO_PATH = ./.obj_so/
