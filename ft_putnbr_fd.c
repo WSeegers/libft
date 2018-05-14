@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/26 00:07:21 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/06 10:42:01 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/14 01:34:22 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 void	ft_putnbr_fd(int nbr, int fd)
 {
 	t_uint unbr;
+
+	if (nbr == 0)
+		ft_putchar('0');
 	if (nbr < 0)
 		ft_putchar_fd('-', fd);
 	unbr = ft_abs(nbr);
