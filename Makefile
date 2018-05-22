@@ -6,13 +6,13 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/05/14 13:44:45 by wseegers         ###   ########.fr        #
+#    Updated: 2018/05/22 23:37:00 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = clang
-CFLAGS = -Wall -Wextra -Werror -I ./includes
+CFLAGS = -Wall -Wextra -Werror -I
 SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_strdup.c ft_strlen.c ft_strnlen.c ft_islower.c ft_strncpy.c \
 		ft_strnew.c ft_strnequ.c ft_strchr.c ft_memccpy.c ft_strdel.c \
