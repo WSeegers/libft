@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 11:30:26 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/23 11:13:17 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 21:00:28 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (0);
 		s2++;
 	}
-	return ((t_uchar) *s1 - (t_uchar) *s2);
+	return ((t_uchar)(*s1) - (t_uchar)(*s2));
 }

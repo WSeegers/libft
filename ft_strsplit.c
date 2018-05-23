@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 23:21:52 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/23 12:53:52 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 21:02:34 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char			**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	i = 0;
-	if (!(splits = (char**)ft_memalloc(sizeof(splits) * 
+	if (!(splits = (char**)ft_memalloc(sizeof(splits) *
 												(count_splits(s, c) + 1))))
 		return (NULL);
 	while (*s == c)
@@ -59,7 +59,7 @@ char			**ft_strsplit(char const *s, char c)
 	while (*s)
 	{
 		len = split_len(s, c);
-		if(!(splits[i] = ft_strnew(len)))
+		if (!(splits[i] = ft_strnew(len)))
 			return (NULL);
 		ft_strncpy(splits[i++], s, len);
 		while (*s && *s != c)

@@ -6,13 +6,13 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/05/22 23:37:00 by wseegers         ###   ########.fr        #
+#    Updated: 2018/05/23 20:58:40 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = clang
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror
 SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_strdup.c ft_strlen.c ft_strnlen.c ft_islower.c ft_strncpy.c \
 		ft_strnew.c ft_strnequ.c ft_strchr.c ft_memccpy.c ft_strdel.c \
@@ -29,13 +29,9 @@ SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_strstr.c ft_strequ.c ft_strsub.c ft_lstmap.c ft_strclr.c \
 		ft_putchar_fd.c ft_lstdelone.c ft_putbyte.c ft_striter.c ft_lstadd.c
 
-O_PATH = ./.obj/
+O_PATH = ./bin/
 OBJ := $(addprefix $(O_PATH), $(SRC:.c=.o))
 DEP := $(addprefix $(O_PATH), $(SRC:.c=.d))
-
-NAME_SO = libft.so
-SO_PATH = ./.obj_so/
-SO_OBJ :=  $(addprefix $(SO_PATH),$(SRC:.c=.o))
 
 all: $(NAME)
 
@@ -49,20 +45,15 @@ $(O_PATH)%.o : %.c
 
 -include $(DEP)
 
-so : $(NAME_SO)
-
-$(NAME_SO) : $(SO_OBJ)
-	gcc -shared -o libft.so $?
-
 $(SO_PATH)%.o : %.c
 	@mkdir -p $(SO_PATH)
 	$(CC) $(CFLAGS) -fpic -c $< -o $@
 
 clean :
-	rm -f $(OBJ) $(DEP) $(SO_OBJ)
+	rm -rf $(O_PATH)
 
 fclean : clean
-	rm -f $(NAME) $(NAME_SO)
+	rm -f $(NAME)
 
 re : fclean all
 

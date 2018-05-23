@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 21:54:41 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/23 12:45:06 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 21:01:47 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strsub(char const *str, t_uint start, size_t len)
 	char	*ret;
 	t_uint	i;
 
-	if(!str || !(ret = ft_strnew(len)))
+	if (!str || !(ret = ft_strnew(len)))
 		return (NULL);
 	i = -1;
 	while (++i < len)
