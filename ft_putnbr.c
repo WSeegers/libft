@@ -6,13 +6,13 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 23:05:11 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/26 00:08:58 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:12:24 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putnbr(int nbr)
-{	
+{
 	ft_putnbr_fd(nbr, 1);
 }

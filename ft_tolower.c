@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/21 00:16:11 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/05/10 17:24:44 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 10:32:25 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 int		ft_tolower(int c)
 {
+	char chr;
+
 	if (c == -1)
 		return (-1);
-	if (c >= -128 && c < 256)
+	if (c >= 0 && c < 256)
 	{
-		c = c & 0xff;
+		chr = c;
 		if (ft_isupper(c))
 			return (c | 0x20);
 	}

@@ -6,11 +6,11 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:49:03 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:54:19 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:13:53 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long ft_min(long nbr1, long nbr2)
+long	ft_min(long nbr1, long nbr2)
 {
 	if (nbr1 < nbr2)
 		return (nbr1);

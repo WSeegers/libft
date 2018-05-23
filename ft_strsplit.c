@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 23:21:52 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/26 00:03:25 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:53:52 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static size_t	count_splits(char const *s, char c)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (*s == c)
@@ -30,9 +30,9 @@ static size_t	count_splits(char const *s, char c)
 	return (i);
 }
 
-static size_t split_len(char const *s, char c)
+static size_t	split_len(char const *s, char c)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	while (*s == c)
@@ -42,12 +42,11 @@ static size_t split_len(char const *s, char c)
 	return (len);
 }
 
-// This function does not free up mem correctly in case of failed malloc ln 63
 char			**ft_strsplit(char const *s, char c)
 {
-	size_t i;
-	size_t len;
-	char **splits;
+	size_t	i;
+	size_t	len;
+	char	**splits;
 
 	if (!s)
 		return (NULL);

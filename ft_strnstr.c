@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:23:48 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/25 14:19:13 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:11:50 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if ((len_n = ft_strlen(little)) > ft_strlen(big))
 		return (NULL);
 	i = 0;
-	while (*big	&& ft_strncmp(big, little, len_n))
+	while (*big && ft_strncmp(big, little, len_n))
 	{
 		if (i++ >= len - len_n)
 			return (NULL);

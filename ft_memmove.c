@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 15:47:45 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/22 16:59:48 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:20:46 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char buf[MB];
-	size_t acc;
-	size_t cpy;
+	char	buf[MB];
+	size_t	acc;
+	size_t	cpy;
 
 	acc = 0;
 	while (acc < n)
 	{
-		//replace with appropriate min function
 		if (n - acc > MB)
 			cpy = MB;
 		else

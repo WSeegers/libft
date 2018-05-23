@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/29 21:52:12 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/02 12:23:51 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:39:17 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	if (!alst || !*alst)
 		return ;
 	pp_lstcur = alst;
-	while ((*pp_lstcur)->next) 
+	while ((*pp_lstcur)->next)
 	{
 		pp_lstnext = &((*pp_lstcur)->next);
 		ft_lstdelone(pp_lstcur, del);

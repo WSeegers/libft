@@ -6,11 +6,11 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 21:21:06 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/25 21:22:45 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:55:14 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_striter(char *s, void(*f)(char *))
+void	ft_striter(char *s, void (*f)(char *))
 {
 	if (s)
 		while (*s)

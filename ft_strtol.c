@@ -6,16 +6,16 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 17:04:17 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/10 18:22:11 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:51:44 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_uchar charmap(char c)
+static t_uchar	charmap(char c)
 {
-	char chr;
-	
+	char	chr;
+
 	chr = ft_toupper(c);
 	if (chr >= '0' && chr <= '9')
 		return (chr - '0');
@@ -24,9 +24,9 @@ static t_uchar charmap(char c)
 	return (127);
 }
 
-static int	getbase(const char **nptr, int base)
+static int		getbase(const char **nptr, int base)
 {
-	const char *ptr;
+	const char	*ptr;
 
 	ptr = *nptr;
 	if ((base == 0 || base == 16) && *ptr == '0')
@@ -42,11 +42,11 @@ static int	getbase(const char **nptr, int base)
 	return (base);
 }
 
-long int ft_strtol(const char *nptr, char **endptr, int base)
+long			ft_strtol(const char *nptr, char **endptr, int base)
 {
-	int neg;
-	long result;
-	char digit;
+	int		neg;
+	long	result;
+	char	digit;
 
 	if (base < 0 || base > 36)
 		return (0);
@@ -66,6 +66,6 @@ long int ft_strtol(const char *nptr, char **endptr, int base)
 			return (FT_LONG_MAX + neg);
 		}
 	if (endptr)
-			*endptr = (char*)nptr;
+		*endptr = (char*)nptr;
 	return (result + (result * -2 * neg));
 }

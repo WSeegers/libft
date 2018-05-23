@@ -6,7 +6,7 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 23:38:55 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/16 23:55:32 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:49:34 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 char	*ft_strdup(const char *s)
 {
-	int len;
-	char *dup;
+	int		len;
+	char	*dup;
 
 	len = 0;
 	len = ft_strlen(s);

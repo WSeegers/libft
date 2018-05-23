@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 22:10:18 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/25 23:01:11 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:06:40 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ static int	iswhitespace(char c)
 	return (c == ' ' || c == '\t' || c == '\n');
 }
 
-char	*ft_strtrim(char const *s)
+char		*ft_strtrim(char const *s)
 {
-	char *start;
-	char *ret;
-	size_t len;
+	char	*start;
+	char	*ret;
+	size_t	len;
 
 	if (!s)
 		return (NULL);

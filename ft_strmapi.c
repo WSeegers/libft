@@ -6,13 +6,13 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 21:38:59 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/25 21:40:36 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:57:34 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(t_uint, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char *ret;
 	t_uint i;

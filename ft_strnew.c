@@ -6,13 +6,13 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 15:11:10 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/23 13:14:48 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:22:19 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnew(size_t n)
+char	*ft_strnew(size_t n)
 {
 	return ((char*)ft_memalloc(n + 1));
 }

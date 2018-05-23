@@ -6,11 +6,11 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/24 12:46:29 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/30 15:53:59 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:55:58 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-long ft_max(long nbr1, long nbr2)
+long	ft_max(long nbr1, long nbr2)
 {
 	if (nbr1 > nbr2)
 		return (nbr1);

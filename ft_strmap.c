@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/25 21:29:33 by wseegers          #+#    #+#             */
-/*   Updated: 2018/04/25 21:38:03 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:18:34 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	char *ret;
-	size_t i;
+	char	*ret;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
-	if(!(ret = ft_strnew(ft_strlen(s))))
+	if (!(ret = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	i = -1;
 	while (s[++i])

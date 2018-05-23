@@ -6,13 +6,13 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/02 19:35:48 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/02 19:53:37 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:15:45 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_uchar charmap(const t_uchar c)
+static t_uchar	charmap(const t_uchar c)
 {
 	if (c < 10)
 		return (c + '0');
@@ -21,7 +21,7 @@ static t_uchar charmap(const t_uchar c)
 	return (0);
 }
 
-char	*ft_itostr(t_ulong nbr, const t_uchar base)
+char			*ft_itostr(t_ulong nbr, const t_uchar base)
 {
 	int		size;
 	char	*str;

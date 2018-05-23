@@ -6,13 +6,13 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/20 23:56:09 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/21 12:49:13 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 12:55:38 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 int		ft_isalpha(int c)
-{	
+{
 	return (ft_islower(c) || ft_isupper(c));
 }

@@ -6,14 +6,14 @@
 /*   By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 15:57:15 by WSeegers          #+#    #+#             */
-/*   Updated: 2018/04/22 16:23:13 by WSeegers         ###   ########.fr       */
+/*   Updated: 2018/05/23 11:21:05 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
 void	ft_memdel(void **ap)
-{	
+{
 	if (!ap || !*ap)
 		return ;
 	free(*ap);
