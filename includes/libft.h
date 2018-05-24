@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:10:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/24 19:25:05 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/24 20:01:01 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ void			ft_putnbr(int nbr);
 void			ft_putnbr_fd(int nbr, int fd);
 void			ft_putendl(char const *s);
 void			ft_putendl_fd(char const *s, int fd);
+void			ft_puthex(t_ulong nbr);
+void			ft_puthex_fd(t_ulong nbr, int fd);
 
 /*
 **	Number and String conversion
@@ -104,7 +106,7 @@ char			**ft_strsplit(char const *s, char c);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
-void			*ft_strccpy(char *dest, const char *src, char c)
+void			*ft_strccpy(char *dest, const char *src, char c);
 int				ft_isdigit(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);

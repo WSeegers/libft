@@ -6,7 +6,7 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/05/23 23:48:41 by wseegers         ###   ########.fr        #
+#    Updated: 2018/05/24 20:03:19 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_min.c ft_memcpy.c ft_memmove.c ft_memchr.c ft_strmap.c \
 		ft_putstr.c ft_intlen.c ft_isdigit.c ft_memdel.c ft_isprint.c \
 		ft_tolower.c ft_abs.c ft_isspace.c ft_strtrim.c ft_isascii.c  \
-		ft_strcmp.c ft_strcat.c ft_lstnew.c ft_putendl_fd.c \
+		ft_strcmp.c ft_strcat.c ft_lstnew.c ft_putendl_fd.c ft_strccpy.c\
 		ft_toascii.c ft_strrchr.c ft_strcpy.c ft_puthex_fd.c ft_puthex.c\
 		ft_putnbr_fd.c ft_lstdel.c ft_isupper.c ft_bzero.c ft_atoi.c \
 		ft_strstr.c ft_strequ.c ft_strsub.c ft_lstmap.c ft_strclr.c \
