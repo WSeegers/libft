@@ -6,13 +6,13 @@
 #    By: WSeegers <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/14 12:34:01 by WSeegers          #+#    #+#              #
-#    Updated: 2018/05/23 20:58:40 by wseegers         ###   ########.fr        #
+#    Updated: 2018/05/23 23:48:41 by wseegers         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 CC = clang
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I includes/
 SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_strdup.c ft_strlen.c ft_strnlen.c ft_islower.c ft_strncpy.c \
 		ft_strnew.c ft_strnequ.c ft_strchr.c ft_memccpy.c ft_strdel.c \
@@ -24,7 +24,7 @@ SRC = ft_strtol.c ft_isalpha.c ft_memset.c ft_lstiter.c ft_strnstr.c \
 		ft_putstr.c ft_intlen.c ft_isdigit.c ft_memdel.c ft_isprint.c \
 		ft_tolower.c ft_abs.c ft_isspace.c ft_strtrim.c ft_isascii.c  \
 		ft_strcmp.c ft_strcat.c ft_lstnew.c ft_putendl_fd.c \
-		ft_toascii.c ft_strrchr.c ft_strcpy.c \
+		ft_toascii.c ft_strrchr.c ft_strcpy.c ft_puthex_fd.c ft_puthex.c\
 		ft_putnbr_fd.c ft_lstdel.c ft_isupper.c ft_bzero.c ft_atoi.c \
 		ft_strstr.c ft_strequ.c ft_strsub.c ft_lstmap.c ft_strclr.c \
 		ft_putchar_fd.c ft_lstdelone.c ft_putbyte.c ft_striter.c ft_lstadd.c

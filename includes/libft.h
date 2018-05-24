@@ -6,7 +6,7 @@
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/14 13:10:40 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/23 16:44:31 by wseegers         ###   ########.fr       */
+/*   Updated: 2018/05/24 19:25:05 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,11 @@ void			ft_strclr(char *s);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
+void			ft_striter(char *s, void (*f)(char *));
+void			ft_striteri(char *s, void (*f)(unsigned int, char *));
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
+void			*ft_strccpy(char *dest, const char *src, char c)
+int				ft_isdigit(int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 int				ft_toascii(int c);

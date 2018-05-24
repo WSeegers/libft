@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_puthex_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/29 21:43:03 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/24 15:26:20 by wseegers         ###   ########.fr       */
+/*   Created: 2018/05/23 23:23:17 by wseegers          #+#    #+#             */
+/*   Updated: 2018/05/23 23:46:45 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+void	ft_puthex_fd(t_ulong nbr, int fd)
 {
-	t_list *list;
-
-	list = *alst;
-	(*del)(list->content, list->content_size);
-	ft_memdel((void**)(&list));
-	*alst = NULL;
+	if (nbr >> 4)
+		ft_puthex_fd(nbr >> 4, fd);
+	ft_putchar_fd("0123456789abcdef"[nbr & 0xf], fd);
 }

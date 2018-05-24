@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wseegers <wseegers.mauws@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/29 21:43:03 by wseegers          #+#    #+#             */
-/*   Updated: 2018/05/24 15:26:20 by wseegers         ###   ########.fr       */
+/*   Created: 2018/05/23 23:49:04 by wseegers          #+#    #+#             */
+/*   Updated: 2018/05/23 23:49:54 by wseegers         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
+void			ft_puthex(t_ulong nbr)
 {
-	t_list *list;
-
-	list = *alst;
-	(*del)(list->content, list->content_size);
-	ft_memdel((void**)(&list));
-	*alst = NULL;
+	ft_puthex_fd(nbr, 1);
 }
